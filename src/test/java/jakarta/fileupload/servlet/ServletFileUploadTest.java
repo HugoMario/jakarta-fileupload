@@ -16,11 +16,11 @@
  */
 package jakarta.fileupload.servlet;
 
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.fileupload.Constants;
 import jakarta.fileupload.FileItem;
 import jakarta.fileupload.MockHttpServletRequest;
 import jakarta.fileupload.disk.DiskFileItemFactory;
+import jakarta.servlet.http.HttpServletRequest;
 import org.junit.Test;
 
 import java.util.List;

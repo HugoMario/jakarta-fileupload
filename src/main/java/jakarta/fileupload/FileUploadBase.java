@@ -16,7 +16,6 @@
  */
 package jakarta.fileupload;
 
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.fileupload.MultipartStream.ItemInputStream;
 import jakarta.fileupload.servlet.ServletFileUpload;
 import jakarta.fileupload.servlet.ServletRequestContext;
@@ -24,6 +23,7 @@ import jakarta.fileupload.util.Closeable;
 import jakarta.fileupload.util.FileItemHeadersImpl;
 import jakarta.fileupload.util.LimitedInputStream;
 import jakarta.fileupload.util.Streams;
+import jakarta.servlet.http.HttpServletRequest;
 import org.apache.commons.io.IOUtils;
 
 import java.io.IOException;
