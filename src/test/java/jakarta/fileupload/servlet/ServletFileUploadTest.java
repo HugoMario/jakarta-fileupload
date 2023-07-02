@@ -81,11 +81,11 @@ public class ServletFileUploadTest {
     @Test
     public void parseImpliedUtf8()
 	    throws Exception {
-        // utf8 encoded form-data without explicit content-type encoding
+        // utf8 encoded form-data without explicit content-type encoding.
         String text = "-----1234\r\n" +
                 "Content-Disposition: form-data; name=\"utf8Html\"\r\n" +
                 "\r\n" +
-                "Thís ís the coñteñt of the fíle\n" +
+                "Thï¿½s ï¿½s the coï¿½teï¿½t of the fï¿½le\n" +
                 "\r\n" +
                 "-----1234--\r\n";
 
@@ -97,6 +97,6 @@ public class ServletFileUploadTest {
         ServletFileUpload upload = new ServletFileUpload(fileItemFactory);
         List<FileItem> fileItems = upload.parseRequest(request);
         FileItem fileItem = fileItems.get(0);
-        assertTrue(fileItem.getString(), fileItem.getString().contains("coñteñt"));
+        assertTrue(fileItem.getString(), fileItem.getString().contains("coï¿½teï¿½t"));
     }
 }

@@ -130,10 +130,10 @@ public final class Base64DecoderTestCase {
 
     // These inputs cause java.lang.ArrayIndexOutOfBoundsException
     // in the Java 6 method DatatypeConverter.parseBase64Binary(String)
-    // The non-ASCII characters should just be ignored
+    // The non-ASCII characters should just be ignored.
     @Test
     public void nonASCIIcharacter() throws Exception {
-        assertEncoded("f","Zg=À="); // A-grave
+        assertEncoded("f","Zg=ï¿½="); // A-grave
         assertEncoded("f","Zg=\u0100=");
     }
 
